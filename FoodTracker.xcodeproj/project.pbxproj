@@ -12,6 +12,7 @@
 		8272D64D20D89CFB0067A1BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8272D64B20D89CFB0067A1BB /* Main.storyboard */; };
 		8272D64F20D89CFD0067A1BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8272D64E20D89CFD0067A1BB /* Assets.xcassets */; };
 		8272D65220D89CFD0067A1BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8272D65020D89CFD0067A1BB /* LaunchScreen.storyboard */; };
+		8272D65B20D8FF520067A1BB /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8272D65A20D8FF520067A1BB /* RatingControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		8272D64E20D89CFD0067A1BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8272D65120D89CFD0067A1BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8272D65320D89CFD0067A1BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8272D65A20D8FF520067A1BB /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		8272D64620D89CFB0067A1BB /* FoodTracker */ = {
 			isa = PBXGroup;
 			children = (
+				8272D65920D8FE2B0067A1BB /* UIControl */,
 				8272D64720D89CFB0067A1BB /* AppDelegate.swift */,
 				8272D64920D89CFB0067A1BB /* ViewController.swift */,
 				8272D64B20D89CFB0067A1BB /* Main.storyboard */,
@@ -62,6 +65,14 @@
 				8272D65320D89CFD0067A1BB /* Info.plist */,
 			);
 			path = FoodTracker;
+			sourceTree = "<group>";
+		};
+		8272D65920D8FE2B0067A1BB /* UIControl */ = {
+			isa = PBXGroup;
+			children = (
+				8272D65A20D8FF520067A1BB /* RatingControl.swift */,
+			);
+			path = UIControl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8272D64A20D89CFB0067A1BB /* ViewController.swift in Sources */,
+				8272D65B20D8FF520067A1BB /* RatingControl.swift in Sources */,
 				8272D64820D89CFB0067A1BB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,7 +17,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.delegate = self
-        photoImageView.isUserInteractionEnabled = true
+//        photoImageView.isUserInteractionEnabled = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,6 +31,22 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         mealNameLabel.text = textField.text
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
+        
+//        guard let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage else {
+//            return
+//        }
+        
+        
+        photoImageView.image = selectedImage
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func selectImageFromPhotoLibrary(_ sender: Any) {
