@@ -14,7 +14,6 @@ class MealCell: UITableViewCell {
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var ratingControl: RatingControl!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

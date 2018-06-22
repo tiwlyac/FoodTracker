@@ -1,20 +1,17 @@
 import UIKit
 
 @IBDesignable class RatingControl: UIStackView {
-    
-    @ IBInspectable var starSize: CGSize = CGSize(width: 44.0, height: 44.0){
+    @ IBInspectable var starSize: CGSize = CGSize(width: 44.0, height: 44.0) {
         didSet {
             setupButtons()
         }
     }
     
-    @ IBInspectable var starCount: Int = 5{
+    @ IBInspectable var starCount: Int = 5 {
         didSet {
             setupButtons()
         }
     }
-    
-
     private var ratingButtons = [UIButton]()
     var rating = 0 {
         didSet {
@@ -31,7 +28,6 @@ import UIKit
         super.init(coder: coder)
         setupButtons()
     }
-    
     //MARK: - Private Methods
     private func setupButtons() {
         for button in ratingButtons {
@@ -51,7 +47,7 @@ import UIKit
             let button = UIButton()
             // Set the button images
 //            button.backgroundColor = .red
-            button.setImage(emptyStar, for: .normal)
+            button.setImage(emptyStar, for: UIControlState.normal)
             button.setImage(filledStar, for: .selected)
             button.setImage(highlightStar, for: .highlighted)
             button.setImage(highlightStar, for: [.highlighted, .selected])

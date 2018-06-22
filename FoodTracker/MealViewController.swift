@@ -1,111 +1,98 @@
 //
-//  MealViewController.swift
+//  ViewController.swift
 //  FoodTracker
 //
-//  Created by Anun Chaichomphoo on 21/6/2561 BE.
+//  Created by Anun Chaichomphoo on 19/6/2561 BE.
 //  Copyright © 2561 KBTG. All rights reserved.
 //
 
 import UIKit
+import os
 
-class MealViewController: UITableViewController {
+class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate,
+    UINavigationControllerDelegate {
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var mealNameLabel: UILabel!
+    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var ratingControl: RatingControl!
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
     
-    var meals = [Meal]()
-
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    var meal : Meal?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadSampleMeal()
+        nameTextField.delegate = self
+        updateSaveButtonState()
+//        photoImageView.isUserInteractionEnabled = true
     }
-    
-    private func loadSampleMeal() {
-        
-        guard let meal1 = Meal(name: "Grilled Chicken", photo: #imageLiteral(resourceName: "meal"), rating: 4) else {
-            fatalError("Unable to instantiate meal1")
+    //Mark: Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard  let button = sender as? UIBarButtonItem, button === saveButton  else {
+            os_log("The save button was not pressed, cancelling", log:  OSLog.default, type: .debug)
+            return
         }
-        
-        guard let meal2 = Meal(name: "Fried Rice", photo: #imageLiteral(resourceName: "meal2"), rating: 5) else {
-            fatalError("Unable to instantiate meal2")
-        }
-        
-        guard let meal3 = Meal(name: "Fried Chicken", photo: #imageLiteral(resourceName: "meal3"), rating: 5) else {
-            fatalError("Unable to instantiate meal3")
-        }
-        
-        meals += [meal1, meal2, meal3]
+        let name = nameTextField.text ?? ""
+        let photo = photoImageView.image
+        let rating = ratingControl.rating
+        meal = Meal(name: name, photo: photo, rating: rating)
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return meals.count
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MealCell", for: indexPath) as? MealCell else {
-            fatalError("The dequeue cell is not an instain of MealCell")
-        }
-        
-        let meal = meals[indexPath.row]
-        
-        cell.nameLabel.text = meal.name
-        cell.photoImageView.image = meal.photo
-        cell.ratingControl.rating = meal.rating
-
-        return cell
-    }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
         return true
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        saveButton.isEnabled = false
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        updateSaveButtonState()
+        navigationItem.title = textField.text
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
+        
+//        guard let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage else {
+//            return
+//        }
+        
+        
+        photoImageView.image = selectedImage
+        dismiss(animated: true, completion: nil)
     }
-    */
-
+    @IBAction func selectImageFromPhotoLibrary(_ sender: Any) {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.sourceType = .photoLibrary
+        imagePickerController.delegate = self
+        present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    private func updateSaveButtonState() {
+        saveButton.isEnabled = !(nameTextField.text ?? "").isEmpty
+    }
+    
+    @IBAction func setDefaultLabelText(_ sender: Any) {
+        mealNameLabel.text = "Default Label"
+    }
+    
 }
+
+//// MARK: UITextDelegate
+//extension ViewController: UITextFieldDelegate {
+//
+//
+//}
+
