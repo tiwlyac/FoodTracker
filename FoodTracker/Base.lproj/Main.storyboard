@@ -141,12 +141,13 @@
                                     <constraints>
                                         <constraint firstItem="gfy-SN-W2k" firstAttribute="top" secondItem="Srz-8s-x5X" secondAttribute="bottom" constant="8" id="ABV-H8-Gma"/>
                                         <constraint firstItem="HwQ-si-vYB" firstAttribute="leading" secondItem="tD7-e5-zjm" secondAttribute="leading" id="BnL-Ey-7kf"/>
-                                        <constraint firstAttribute="trailing" secondItem="gfy-SN-W2k" secondAttribute="trailing" constant="57" id="Mi0-p1-yVB"/>
+                                        <constraint firstAttribute="trailing" secondItem="gfy-SN-W2k" secondAttribute="trailing" constant="57" id="Cd4-8w-Klh"/>
                                         <constraint firstAttribute="bottom" secondItem="HwQ-si-vYB" secondAttribute="bottom" id="UDK-kk-6qE"/>
                                         <constraint firstItem="gfy-SN-W2k" firstAttribute="leading" secondItem="HwQ-si-vYB" secondAttribute="trailing" constant="8" id="Yag-W2-XXZ"/>
                                         <constraint firstItem="Srz-8s-x5X" firstAttribute="leading" secondItem="HwQ-si-vYB" secondAttribute="trailing" constant="8" id="e8J-YG-Xmb"/>
                                         <constraint firstItem="Srz-8s-x5X" firstAttribute="top" secondItem="tD7-e5-zjm" secondAttribute="top" constant="8" id="flY-c1-Bel"/>
                                         <constraint firstItem="HwQ-si-vYB" firstAttribute="top" secondItem="tD7-e5-zjm" secondAttribute="top" id="gY0-Fj-0NQ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="gfy-SN-W2k" secondAttribute="trailing" constant="41" id="j3e-Uz-JSm"/>
                                         <constraint firstAttribute="trailing" secondItem="Srz-8s-x5X" secondAttribute="trailing" constant="8" id="xB5-zs-hz2"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -154,6 +155,7 @@
                                     <outlet property="nameLabel" destination="Srz-8s-x5X" id="OrP-Ne-gIc"/>
                                     <outlet property="photoImageView" destination="HwQ-si-vYB" id="1f9-Yh-ew5"/>
                                     <outlet property="ratingControl" destination="gfy-SN-W2k" id="Fcu-PX-ClH"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="qYi-Ak-0vU"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -165,7 +167,7 @@
                     <navigationItem key="navigationItem" title="Your Meal" id="T0u-9K-ovb">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="UDf-SY-red">
                             <connections>
-                                <segue destination="Cpg-HX-Q6s" kind="showDetail" id="Gqy-3v-BhY"/>
+                                <segue destination="Cpg-HX-Q6s" kind="showDetail" identifier="AddItem" id="Gqy-3v-BhY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -208,10 +210,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lvz-Uh-LLk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2688.8000000000002" y="32.512315270935964"/>
+            <point key="canvasLocation" x="2679" y="392"/>
         </scene>
     </scenes>
     <resources>
         <image name="defaultPhoto" width="320" height="320"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="qYi-Ak-0vU"/>
+    </inferredMetricsTieBreakers>
 </document>

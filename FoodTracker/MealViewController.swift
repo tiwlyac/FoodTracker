@@ -18,21 +18,40 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     @IBOutlet weak var ratingControl: RatingControl!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     
-    @IBAction func cancel(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
-    }
     var meal : Meal?
+    
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        // Depending on style of presentation (modal or push presentation), this view controller needs to be dismissed in two different ways.
+        let isPresentingInAddMealMode = presentingViewController is UINavigationController
+        if isPresentingInAddMealMode {
+            dismiss(animated: true, completion: nil)
+        }
+        else if let owningNavigationController = navigationController{
+            owningNavigationController.popViewController(animated: true)
+        }
+        else {
+            fatalError("The MealViewController is not inside a navigation controller.")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.delegate = self
+        
+        if let meal = meal {
+            navigationItem.title = meal.name
+            nameTextField.text   = meal.name
+            photoImageView.image = meal.photo
+            ratingControl.rating = meal.rating
+        }
+        
         updateSaveButtonState()
 //        photoImageView.isUserInteractionEnabled = true
     }
     //Mark: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        guard  let button = sender as? UIBarButtonItem, button === saveButton  else {
+        guard let button = sender as? UIBarButtonItem, button === saveButton  else {
             os_log("The save button was not pressed, cancelling", log:  OSLog.default, type: .debug)
             return
         }
