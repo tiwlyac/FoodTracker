@@ -131,7 +131,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfy-SN-W2k" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                        <stackView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="gfy-SN-W2k" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
                                             <rect key="frame" x="98" y="36.666666666666664" width="220" height="43.999999999999993"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="gfy-SN-W2k" secondAttribute="height" multiplier="5:1" id="co2-8f-apB"/>
