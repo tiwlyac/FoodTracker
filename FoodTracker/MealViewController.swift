@@ -36,6 +36,8 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(MealViewController.dismissKeyboard(_:)))
+        view.addGestureRecognizer(tapGesture)
         nameTextField.delegate = self
         
         if let meal = meal {
@@ -48,6 +50,12 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         updateSaveButtonState()
 //        photoImageView.isUserInteractionEnabled = true
     }
+    
+    @objc private func dismissKeyboard(_ sender: Any){
+        view.endEditing(true)
+        
+    }
+    
     //Mark: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
