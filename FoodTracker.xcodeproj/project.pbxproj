@@ -22,6 +22,7 @@
 		82A3715020F4576800E1F10F /* FoodTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A3714F20F4576800E1F10F /* FoodTrackerUITests.swift */; };
 		82A3715920F470E100E1F10F /* MealSnapShotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A3715720F46D5C00E1F10F /* MealSnapShotTest.swift */; };
 		82A3715F20F4A06100E1F10F /* TraitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A3715E20F4A06100E1F10F /* TraitController.swift */; };
+		82A3716120F4B03C00E1F10F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A3716020F4B02600E1F10F /* Alamofire.framework */; };
 		D0AD71B8CFD61D693C533C50 /* Pods_FoodTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD5F0F1A9C37884D62ABF3A /* Pods_FoodTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		82A3715120F4576800E1F10F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82A3715720F46D5C00E1F10F /* MealSnapShotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealSnapShotTest.swift; sourceTree = "<group>"; };
 		82A3715E20F4A06100E1F10F /* TraitController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraitController.swift; sourceTree = "<group>"; };
+		82A3716020F4B02600E1F10F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		9DD5F0F1A9C37884D62ABF3A /* Pods_FoodTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -77,6 +79,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0AD71B8CFD61D693C533C50 /* Pods_FoodTracker.framework in Frameworks */,
+				82A3716120F4B03C00E1F10F /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +207,7 @@
 		ADEF900E1A7C52DF3D793728 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				82A3716020F4B02600E1F10F /* Alamofire.framework */,
 				9DD5F0F1A9C37884D62ABF3A /* Pods_FoodTracker.framework */,
 				0702A5493C1880A0C19FF9C9 /* Pods_FoodTrackerTests.framework */,
 			);
@@ -221,7 +225,7 @@
 				8272D64020D89CFB0067A1BB /* Sources */,
 				8272D64120D89CFB0067A1BB /* Frameworks */,
 				8272D64220D89CFB0067A1BB /* Resources */,
-				44E163AD21A43F716D596C2E /* [CP] Embed Pods Frameworks */,
+				82CEAAB120F4BC3800FD4EF7 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -377,23 +381,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		44E163AD21A43F716D596C2E /* [CP] Embed Pods Frameworks */ = {
+		82CEAAB120F4BC3800FD4EF7 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-FoodTracker/Pods-FoodTracker-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = Carthage;
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodTracker/Pods-FoodTracker-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 		BEED0BBA394A97200CDA7521 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -603,6 +605,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KKSX9TS5F2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = FoodTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -621,6 +628,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KKSX9TS5F2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = FoodTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

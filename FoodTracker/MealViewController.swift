@@ -1,13 +1,6 @@
-//
-//  ViewController.swift
-//  FoodTracker
-//
-//  Created by Anun Chaichomphoo on 19/6/2561 BE.
-//  Copyright © 2561 KBTG. All rights reserved.
-//
-
 import UIKit
 import os
+import Alamofire
 
 class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate,
     UINavigationControllerDelegate {

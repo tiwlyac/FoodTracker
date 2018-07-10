@@ -6,11 +6,9 @@ target 'FoodTracker' do
   use_frameworks!
 
   # Pods for FoodTracker
-  pod 'Alamofire', '~> 4.7'
 
   target 'FoodTrackerTests' do
     inherit! :search_paths
-    use_frameworks!
     pod 'iOSSnapshotTestCase'
   end
 

@@ -14,14 +14,14 @@ class MealSnapShotTest: FBSnapshotTestCase {
     
     override func setUp() {
         super.setUp()
-        recordMode = true
+        recordMode = false
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     func test_size() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         [Device.phone4inch,Device.phone5_8inch].forEach { (device) in
-            let vc = storyboard.instantiateViewController(withIdentifier: "MealsViewController" )
+            let vc = storyboard.instantiateViewController(withIdentifier: "MealViewController")
             let (parant, _) = traitControllers(device: device, orientation: Orientation.portrait, child: vc)
             FBSnapshotVerifyView(parant.view, identifier: "\(device)")
         }
