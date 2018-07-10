@@ -21,15 +21,12 @@ class FoodTrackerTests: XCTestCase {
     }
     
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let screenSize = CGRect(x: 0, y: 0, width: 640, height: 960)
+        
+//        XCTAssertEqual(screenSize, Device.phone5_8inch.size(orietation: Orientation.portrait))
+//        XCTAssertEqual(screenSize, Device.phone4inch.size(orietation: Orientation.portrait))
+        
     }
-    
-//    func testPerformanceExample() {
-//        // This is an example of a performance test case.
-//        self.measure {
-//            // Put the code you want to measure the time of here.
-//        }
-//    }
     
 }

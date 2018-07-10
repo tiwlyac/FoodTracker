@@ -24,16 +24,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="btQ-bd-mW9">
-                                <rect key="frame" x="16" y="107.99999999999997" width="343" height="476.33333333333326"/>
+                                <rect key="frame" x="16" y="108" width="344" height="482"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PC9-fa-Lpj">
-                                        <rect key="frame" x="128.33333333333334" y="0.0" width="86.333333333333343" height="20.333333333333332"/>
+                                        <rect key="frame" x="129" y="0.0" width="86.333333333333314" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="QuA-9z-1ue">
-                                        <rect key="frame" x="0.0" y="28.333333333333343" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="28.333333333333339" width="344" height="35.666666666666657"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="hul-4U-4AU"/>
                                         </constraints>
@@ -42,14 +42,14 @@
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OUP-gb-cwN">
-                                        <rect key="frame" x="96" y="66.333333333333343" width="151" height="30"/>
+                                        <rect key="frame" x="96" y="72" width="152" height="30"/>
                                         <state key="normal" title="Set Default Label Text"/>
                                         <connections>
                                             <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Pg-73-q5v"/>
                                         </connections>
                                     </button>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="qKu-LC-qbU">
-                                        <rect key="frame" x="11.666666666666657" y="104.33333333333337" width="320" height="320"/>
+                                        <rect key="frame" x="12" y="110" width="320" height="320"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="qKu-LC-qbU" secondAttribute="height" multiplier="1:1" id="2Tx-4K-Blq"/>
@@ -60,15 +60,22 @@
                                         </connections>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xdq-7j-WpF" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="45.666666666666657" y="432.33333333333337" width="251.99999999999997" height="44"/>
+                                        <rect key="frame" x="46" y="438" width="252" height="44"/>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="qKu-LC-qbU" firstAttribute="leading" secondItem="btQ-bd-mW9" secondAttribute="leading" constant="12" id="aHV-Nb-Vf8"/>
+                                    <constraint firstItem="QuA-9z-1ue" firstAttribute="leading" secondItem="btQ-bd-mW9" secondAttribute="leading" id="p8n-dT-66i"/>
+                                    <constraint firstItem="xdq-7j-WpF" firstAttribute="leading" secondItem="btQ-bd-mW9" secondAttribute="leading" constant="46" id="qLm-pa-jV8"/>
+                                    <constraint firstItem="OUP-gb-cwN" firstAttribute="leading" secondItem="btQ-bd-mW9" secondAttribute="leading" constant="96" id="yMb-z1-qWM"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="btQ-bd-mW9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4D0-RM-oHu"/>
-                            <constraint firstItem="btQ-bd-mW9" firstAttribute="top" secondItem="tXG-fI-3ah" secondAttribute="bottom" constant="20" id="GDq-7C-C7l"/>
+                            <constraint firstItem="btQ-bd-mW9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4Fd-Sv-F2M"/>
+                            <constraint firstItem="4Vb-g1-Lo0" firstAttribute="top" secondItem="btQ-bd-mW9" secondAttribute="bottom" constant="188" id="Gxf-3z-VTB"/>
+                            <constraint firstItem="btQ-bd-mW9" firstAttribute="top" secondItem="tXG-fI-3ah" secondAttribute="bottom" constant="20" id="jzz-rU-Gtb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Meal" id="OyC-5W-Kjv">
@@ -100,7 +107,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3631.1999999999998" y="32.512315270935964"/>
+            <point key="canvasLocation" x="3630.5" y="32"/>
         </scene>
         <!--Your Meal-->
         <scene sceneID="IQM-P7-M7d">
@@ -217,6 +224,6 @@
         <image name="defaultPhoto" width="320" height="320"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1xg-ig-4r7"/>
+        <segue reference="qYi-Ak-0vU"/>
     </inferredMetricsTieBreakers>
 </document>
