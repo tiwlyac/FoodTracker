@@ -22,7 +22,11 @@
 		82A3715020F4576800E1F10F /* FoodTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A3714F20F4576800E1F10F /* FoodTrackerUITests.swift */; };
 		82A3715920F470E100E1F10F /* MealSnapShotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A3715720F46D5C00E1F10F /* MealSnapShotTest.swift */; };
 		82A3715F20F4A06100E1F10F /* TraitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A3715E20F4A06100E1F10F /* TraitController.swift */; };
-		82A3716120F4B03C00E1F10F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A3716020F4B02600E1F10F /* Alamofire.framework */; };
+		82FE648220FDBF4A00CABC9F /* Slip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FE648120FDBF4A00CABC9F /* Slip.swift */; };
+		82FE648420FDBF6000CABC9F /* Slip.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82FE648320FDBF6000CABC9F /* Slip.xib */; };
+		82FE648620FDC9BC00CABC9F /* SlipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FE648520FDC9BC00CABC9F /* SlipTests.swift */; };
+		82FE648820FDD5BF00CABC9F /* UIView+captureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FE648720FDD5BF00CABC9F /* UIView+captureView.swift */; };
+		82FE648A20FDEAAF00CABC9F /* PHPhotoLibrary+SaveImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FE648920FDEAAF00CABC9F /* PHPhotoLibrary+SaveImage.swift */; };
 		D0AD71B8CFD61D693C533C50 /* Pods_FoodTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD5F0F1A9C37884D62ABF3A /* Pods_FoodTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +74,11 @@
 		82A3715720F46D5C00E1F10F /* MealSnapShotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealSnapShotTest.swift; sourceTree = "<group>"; };
 		82A3715E20F4A06100E1F10F /* TraitController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraitController.swift; sourceTree = "<group>"; };
 		82A3716020F4B02600E1F10F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		82FE648120FDBF4A00CABC9F /* Slip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slip.swift; sourceTree = "<group>"; };
+		82FE648320FDBF6000CABC9F /* Slip.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slip.xib; sourceTree = "<group>"; };
+		82FE648520FDC9BC00CABC9F /* SlipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlipTests.swift; sourceTree = "<group>"; };
+		82FE648720FDD5BF00CABC9F /* UIView+captureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+captureView.swift"; sourceTree = "<group>"; };
+		82FE648920FDEAAF00CABC9F /* PHPhotoLibrary+SaveImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHPhotoLibrary+SaveImage.swift"; sourceTree = "<group>"; };
 		9DD5F0F1A9C37884D62ABF3A /* Pods_FoodTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -79,7 +88,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0AD71B8CFD61D693C533C50 /* Pods_FoodTracker.framework in Frameworks */,
-				82A3716120F4B03C00E1F10F /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +123,8 @@
 		820F5FB420DBAB6000738AED /* Extention */ = {
 			isa = PBXGroup;
 			children = (
+				82FE648720FDD5BF00CABC9F /* UIView+captureView.swift */,
+				82FE648920FDEAAF00CABC9F /* PHPhotoLibrary+SaveImage.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -144,6 +154,7 @@
 		8272D64620D89CFB0067A1BB /* FoodTracker */ = {
 			isa = PBXGroup;
 			children = (
+				82FE648020FDBF1D00CABC9F /* Slip */,
 				820F5FB420DBAB6000738AED /* Extention */,
 				8282E60020DB8059008D7879 /* Cell */,
 				8282E5FB20DB60E9008D7879 /* Model */,
@@ -204,6 +215,16 @@
 			path = FoodTrackerUITests;
 			sourceTree = "<group>";
 		};
+		82FE648020FDBF1D00CABC9F /* Slip */ = {
+			isa = PBXGroup;
+			children = (
+				82FE648120FDBF4A00CABC9F /* Slip.swift */,
+				82FE648320FDBF6000CABC9F /* Slip.xib */,
+				82FE648520FDC9BC00CABC9F /* SlipTests.swift */,
+			);
+			path = Slip;
+			sourceTree = "<group>";
+		};
 		ADEF900E1A7C52DF3D793728 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,7 +246,7 @@
 				8272D64020D89CFB0067A1BB /* Sources */,
 				8272D64120D89CFB0067A1BB /* Frameworks */,
 				8272D64220D89CFB0067A1BB /* Resources */,
-				82CEAAB120F4BC3800FD4EF7 /* Carthage */,
+				5217570CF5392A58EB1EC051 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -323,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8272D65220D89CFD0067A1BB /* LaunchScreen.storyboard in Resources */,
+				82FE648420FDBF6000CABC9F /* Slip.xib in Resources */,
 				8272D64F20D89CFD0067A1BB /* Assets.xcassets in Resources */,
 				8272D64D20D89CFB0067A1BB /* Main.storyboard in Resources */,
 			);
@@ -381,21 +403,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		82CEAAB120F4BC3800FD4EF7 /* Carthage */ = {
+		5217570CF5392A58EB1EC051 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"${SRCROOT}/Pods/Target Support Files/Pods-FoodTracker/Pods-FoodTracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 			);
-			name = Carthage;
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodTracker/Pods-FoodTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		BEED0BBA394A97200CDA7521 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -422,11 +446,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82FE648220FDBF4A00CABC9F /* Slip.swift in Sources */,
+				82FE648A20FDEAAF00CABC9F /* PHPhotoLibrary+SaveImage.swift in Sources */,
 				8282E60420DB80F0008D7879 /* MealCell.swift in Sources */,
 				8282E5FD20DB6121008D7879 /* Meal.swift in Sources */,
 				8272D64A20D89CFB0067A1BB /* MealViewController.swift in Sources */,
 				8272D65B20D8FF520067A1BB /* RatingControl.swift in Sources */,
 				8272D64820D89CFB0067A1BB /* AppDelegate.swift in Sources */,
+				82FE648820FDD5BF00CABC9F /* UIView+captureView.swift in Sources */,
 				8282E60620DB869F008D7879 /* MealsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82A3715920F470E100E1F10F /* MealSnapShotTest.swift in Sources */,
+				82FE648620FDC9BC00CABC9F /* SlipTests.swift in Sources */,
 				8282E5FF20DB62CF008D7879 /* MealTests.swift in Sources */,
 				82A3715F20F4A06100E1F10F /* TraitController.swift in Sources */,
 				8272D68920DA6BF90067A1BB /* FoodTrackerTests.swift in Sources */,
@@ -605,7 +633,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KKSX9TS5F2;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -628,7 +656,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KKSX9TS5F2;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

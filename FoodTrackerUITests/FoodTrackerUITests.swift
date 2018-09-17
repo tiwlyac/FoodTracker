@@ -23,27 +23,27 @@ class FoodTrackerUITests: XCTestCase {
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
     
-    func test_add_delete_meal() {
-        
-        
-        let app = XCUIApplication()
-        let yourMealNavigationBar = app.navigationBars["Your Meal"]
-        yourMealNavigationBar.buttons["Add"].tap()
-        
-        let enterMealNameTextField = app.textFields["Enter meal name"]
-        enterMealNameTextField.tap()
-        enterMealNameTextField.typeText("อาหารกากๆ")
-        enterMealNameTextField.typeText("\r")
-        app.buttons["Set 4 star rating"].tap()
-        app.navigationBars["อาหารกากๆ"].buttons["Save"].tap()
-        yourMealNavigationBar.buttons["Edit"].tap()
-        
-        let tableQuery = app.tables
-        tableQuery.buttons["Delete อาหารกากๆ"].tap()
-        tableQuery.buttons["Delete"].tap()
-        yourMealNavigationBar.buttons["Done"].tap()
-        
-                
-    }
+//    func test_add_delete_meal() {
+//        
+//        
+//        let app = XCUIApplication()
+//        let yourMealNavigationBar = app.navigationBars["Your Meal"]
+//        yourMealNavigationBar.buttons["Add"].tap()
+//        
+//        let enterMealNameTextField = app.textFields["Enter meal name"]
+//        enterMealNameTextField.tap()
+//        enterMealNameTextField.typeText("อาหารกากๆ")
+//        enterMealNameTextField.typeText("\r")
+//        app.buttons["Set 4 star rating"].tap()
+//        app.navigationBars["อาหารกากๆ"].buttons["Save"].tap()
+//        yourMealNavigationBar.buttons["Edit"].tap()
+//        
+//        let tableQuery = app.tables
+//        tableQuery.buttons["Delete อาหารกากๆ"].tap()
+//        tableQuery.buttons["Delete"].tap()
+//        yourMealNavigationBar.buttons["Done"].tap()
+//        
+//                
+//    }
     
 }

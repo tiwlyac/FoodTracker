@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="SBO-sT-iR6" customClass="Slip" customModule="FoodTracker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="โอนเงินสำเร็จแล้ว" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvM-aQ-SBG">
+                    <rect key="frame" x="16" y="16" width="268" height="20"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="จำนวน" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAh-D4-pyj">
+                    <rect key="frame" x="63" y="47" width="42" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="บาท" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4v-fk-5YA">
+                    <rect key="frame" x="195" y="47" width="27" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9000.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cnj-yr-66o">
+                    <rect key="frame" x="113" y="42" width="74" height="23"/>
+                    <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kbank" translatesAutoresizingMaskIntoConstraints="NO" id="XwM-Q9-S1q">
+                    <rect key="frame" x="34" y="91" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="3g4-YG-IcC"/>
+                        <constraint firstAttribute="width" constant="80" id="APv-A2-rRh"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kbank" translatesAutoresizingMaskIntoConstraints="NO" id="DEt-Hm-Xdc">
+                    <rect key="frame" x="186" y="91" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="oNv-pd-Otj"/>
+                        <constraint firstAttribute="height" constant="80" id="td8-A1-5Pa"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="จาก" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8A-eS-5no">
+                    <rect key="frame" x="62" y="181" width="25" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="โอนเข้า" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AfL-dN-Z2J">
+                    <rect key="frame" x="203" y="181" width="47" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="วันที่ทำรายการ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6e-fs-iuy">
+                    <rect key="frame" x="16" y="220" width="268" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17 ก.ค. 2561 18.00 น." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcd-iP-pbx">
+                    <rect key="frame" x="16" y="246" width="268" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="JAh-D4-pyj" firstAttribute="leading" secondItem="PvM-aQ-SBG" secondAttribute="leading" constant="47" id="0aB-Dq-tUq"/>
+                <constraint firstItem="PvM-aQ-SBG" firstAttribute="top" secondItem="1Wo-t9-tPa" secondAttribute="top" constant="16" id="33O-ZF-BXo"/>
+                <constraint firstItem="Cnj-yr-66o" firstAttribute="top" secondItem="PvM-aQ-SBG" secondAttribute="bottom" constant="6" id="3ce-PL-uxB"/>
+                <constraint firstItem="Hcd-iP-pbx" firstAttribute="top" secondItem="H6e-fs-iuy" secondAttribute="bottom" constant="8" id="7Hn-ka-kOu"/>
+                <constraint firstItem="1Wo-t9-tPa" firstAttribute="trailing" secondItem="AfL-dN-Z2J" secondAttribute="trailing" constant="50" id="8OQ-nl-f1m"/>
+                <constraint firstItem="1Wo-t9-tPa" firstAttribute="trailing" secondItem="PvM-aQ-SBG" secondAttribute="trailing" constant="16" id="BHu-ua-yCx"/>
+                <constraint firstItem="Hcd-iP-pbx" firstAttribute="leading" secondItem="1Wo-t9-tPa" secondAttribute="leading" constant="16" id="Bd7-et-GAq"/>
+                <constraint firstItem="H6e-fs-iuy" firstAttribute="leading" secondItem="1Wo-t9-tPa" secondAttribute="leading" constant="16" id="DzV-8V-7Ke"/>
+                <constraint firstItem="XwM-Q9-S1q" firstAttribute="leading" secondItem="PvM-aQ-SBG" secondAttribute="leading" constant="18" id="Ncc-dk-hul"/>
+                <constraint firstItem="w8A-eS-5no" firstAttribute="top" secondItem="XwM-Q9-S1q" secondAttribute="bottom" constant="10" id="OTY-xP-gjO"/>
+                <constraint firstItem="XwM-Q9-S1q" firstAttribute="top" secondItem="JAh-D4-pyj" secondAttribute="bottom" constant="26" id="RVD-66-LHY"/>
+                <constraint firstItem="1Wo-t9-tPa" firstAttribute="trailing" secondItem="Hcd-iP-pbx" secondAttribute="trailing" constant="16" id="SUI-CC-4W6"/>
+                <constraint firstItem="Cnj-yr-66o" firstAttribute="centerX" secondItem="PvM-aQ-SBG" secondAttribute="centerX" id="TTi-kc-Dsq"/>
+                <constraint firstItem="AfL-dN-Z2J" firstAttribute="top" secondItem="DEt-Hm-Xdc" secondAttribute="bottom" constant="10" id="UXf-Lu-WdG"/>
+                <constraint firstItem="w8A-eS-5no" firstAttribute="leading" secondItem="1Wo-t9-tPa" secondAttribute="leading" constant="62" id="WAr-cL-BVG"/>
+                <constraint firstItem="Cnj-yr-66o" firstAttribute="centerY" secondItem="JAh-D4-pyj" secondAttribute="centerY" constant="-2.5" id="XA1-0L-HEo"/>
+                <constraint firstItem="XwM-Q9-S1q" firstAttribute="top" secondItem="PvM-aQ-SBG" secondAttribute="bottom" constant="55" id="aya-yu-CZV"/>
+                <constraint firstItem="Cnj-yr-66o" firstAttribute="leading" secondItem="JAh-D4-pyj" secondAttribute="trailing" constant="8" id="bey-Wl-dKb"/>
+                <constraint firstItem="K4v-fk-5YA" firstAttribute="leading" secondItem="Cnj-yr-66o" secondAttribute="trailing" constant="8" id="fMW-X9-jA5"/>
+                <constraint firstItem="K4v-fk-5YA" firstAttribute="top" secondItem="PvM-aQ-SBG" secondAttribute="bottom" constant="11" id="fQJ-At-FX3"/>
+                <constraint firstItem="1Wo-t9-tPa" firstAttribute="trailing" secondItem="H6e-fs-iuy" secondAttribute="trailing" constant="16" id="ipw-w8-96H"/>
+                <constraint firstItem="PvM-aQ-SBG" firstAttribute="leading" secondItem="1Wo-t9-tPa" secondAttribute="leading" constant="16" id="jnt-a1-pJO"/>
+                <constraint firstItem="H6e-fs-iuy" firstAttribute="top" secondItem="XwM-Q9-S1q" secondAttribute="bottom" constant="49" id="lEZ-As-OjQ"/>
+                <constraint firstItem="DEt-Hm-Xdc" firstAttribute="trailing" secondItem="PvM-aQ-SBG" secondAttribute="trailing" constant="-18" id="lvj-XJ-n6J"/>
+                <constraint firstItem="DEt-Hm-Xdc" firstAttribute="top" secondItem="PvM-aQ-SBG" secondAttribute="bottom" constant="55" id="mIa-Vd-ZX2"/>
+                <constraint firstItem="DEt-Hm-Xdc" firstAttribute="top" secondItem="K4v-fk-5YA" secondAttribute="bottom" constant="26" id="xvM-WS-oZk"/>
+                <constraint firstItem="JAh-D4-pyj" firstAttribute="top" secondItem="PvM-aQ-SBG" secondAttribute="bottom" constant="11" id="y6V-V6-F2y"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="1Wo-t9-tPa"/>
+            <connections>
+                <outlet property="fuckLabel" destination="Cnj-yr-66o" id="EQ8-e5-9ug"/>
+            </connections>
+            <point key="canvasLocation" x="73" y="4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="kbank" width="595" height="591"/>
+    </resources>
+</document>
