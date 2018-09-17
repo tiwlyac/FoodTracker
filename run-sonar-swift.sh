@@ -149,7 +149,7 @@ tailor=""
 lizard="on"
 oclint=""
 fauxpas="on"
-sonarscanner="on"
+sonarscanner=""
 
 while [ $# -gt 0 ]
 do
